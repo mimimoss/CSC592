@@ -2,21 +2,22 @@
 
 #get the inputs from the user
 def main():
-    e = int(input("Enter exponent: "))
     x = int(input("Enter base: "))
-    n = e-1
+    e = int(input("Enter exponent: "))
+    n = int(input("Enter mod: "))
     #grid()
     expMod(x, e, n)
 
 #perform exponentiation algorithm
 def expMod(x, e, n):
+    e = e-1
     binary = bin(e)[2:]
     y = x
     
     #for each binary in the exponent given perform equation
     for i in range(len(binary)):
         y = (y * y) % n
-
+        
         #if the binary equals 1 multiply y by the base given
         if binary[i] == '1':
             y = (y * y) % n
