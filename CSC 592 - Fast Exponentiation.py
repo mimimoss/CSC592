@@ -10,7 +10,7 @@ def main():
 
 #perform exponentiation algorithm
 def expMod(x, e, n):
-    e = e-1
+    a = e-1
     binary = bin(e)[2:]
     y = x
     
@@ -21,7 +21,7 @@ def expMod(x, e, n):
         #if the binary equals 1 multiply y by the base given
         if binary[i] == '1':
             y = (y * y) % n
-    print(y)
+    print(f'the answer to {x} to the power of {e} mod {n} is {y}')
 
 #make grid
 ##def grid():
