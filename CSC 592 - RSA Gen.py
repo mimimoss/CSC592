@@ -30,6 +30,7 @@ def numberGenerator():
         
     bitPrime = ('00000000000000000000000001' + str(b1Last) + str(b2Last) + str(b3Last) + str(b4Last) + b5Last + '1')
     numberPrime = int(bitPrime, 2)
+    print('--------------------------------------------------')
     print('Number | ',numberPrime,' | ',bitPrime,'\n')
     
     return numberPrime
